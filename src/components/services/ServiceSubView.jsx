@@ -99,7 +99,7 @@ export const ServiceSubView = ({ serviceData, categoryKey }) => {
                 <button
                   onClick={() => handleBookExperience(item)}
                   className="btn btn-primary btn-sm"
-                  title="Reserve this experience (Redux action)"
+                  title="Reserve this experience"
                 >
                   <Plus size={15} /> Reserve Experience
                 </button>

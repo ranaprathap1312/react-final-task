@@ -87,7 +87,7 @@ export const RoomCard = ({ room, onQuickBook }) => {
           </div>
 
           <div style={{ display: 'flex', gap: '0.5rem' }}>
-            <Link to={`/rooms/${room.id}`} className="btn btn-secondary btn-sm" title="View room details (useParams)">
+            <Link to={`/rooms/${room.id}`} className="btn btn-secondary btn-sm" title="View suite details">
               Details
             </Link>
             {onQuickBook && (

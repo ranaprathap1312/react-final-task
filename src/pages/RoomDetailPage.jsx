@@ -127,7 +127,7 @@ export const RoomDetailPage = ({ onBookingCreated }) => {
             <RatingStars rating={room.rating} reviewsCount={room.reviewsCount} size={18} />
             <span style={{ color: 'var(--text-muted)' }}>•</span>
             <span style={{ color: 'var(--text-secondary)' }}>
-              <strong>URL Parameter (useParams):</strong> <code>:roomId = {roomId}</code>
+              {room.category ? `${room.category.toUpperCase()} COLLECTION` : 'PRIVATE SANCTUARY'} • SUITE #{room.id}
             </span>
           </div>
         </div>

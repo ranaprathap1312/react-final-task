@@ -102,14 +102,14 @@ export const BookingCard = ({ booking, onEdit, onDelete }) => {
         <button
           onClick={() => onEdit(booking)}
           className="btn btn-secondary btn-sm"
-          title="Edit Reservation (Update Operation)"
+          title="Edit Reservation"
         >
           <Edit3 size={14} /> Edit Booking
         </button>
         <button
           onClick={() => onDelete(booking.id)}
           className="btn btn-danger btn-sm"
-          title="Cancel / Delete Reservation (Delete Operation)"
+          title="Cancel Reservation"
         >
           <Trash2 size={14} /> Cancel Stay
         </button>

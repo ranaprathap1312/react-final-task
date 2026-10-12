@@ -142,10 +142,10 @@ export const AboutPage = () => {
             </div>
             <div>
               <strong style={{ display: 'block', fontSize: '0.98rem' }}>
-                Resort Ambient Soundscape (useRef Hook Demonstration)
+                Resort Coastal Soundscape
               </strong>
               <span style={{ fontSize: '0.82rem', color: 'var(--text-secondary)' }}>
-                Direct DOM audio manipulation: {isPlaying ? 'Playing Live Ocean Waves' : 'Paused'}
+                Atmosphere: {isPlaying ? 'Playing Live Ocean Waves' : 'Audio Paused'}
               </span>
             </div>
           </div>

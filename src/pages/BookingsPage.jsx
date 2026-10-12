@@ -22,7 +22,7 @@ import {
 import { Modal } from '../components/common/Modal';
 
 export const BookingsPage = () => {
-  useDocumentTitle('Manage Guest Reservations (CRUD Operations)');
+  useDocumentTitle('Manage Guest Reservations');
   const { showToast } = useToast();
   const { currency, currencyRates, currencySymbols } = useSelector((state) => state.ui);
 
@@ -123,7 +123,7 @@ export const BookingsPage = () => {
             <span className="section-eyebrow">Front-Desk & Guest Services</span>
             <h1 style={{ marginBottom: '0.4rem' }}>Reservations & Bookings Management</h1>
             <p className="section-subtitle" style={{ margin: 0 }}>
-              Complete CRUD operations (Create, Read, Update, Delete) with local storage persistence and multi-step validation.
+              View, customize, or modify your reserved suites and arrival itineraries with seamless confirmation.
             </p>
           </div>
 
@@ -131,7 +131,7 @@ export const BookingsPage = () => {
             <button
               onClick={handleResetToDefault}
               className="btn btn-secondary btn-sm"
-              title="Reset data back to initial seeds"
+              title="Reset sample reservations"
             >
               Reset Sample Data
             </button>
@@ -139,7 +139,7 @@ export const BookingsPage = () => {
               onClick={() => setIsCreateOpen(true)}
               className="btn btn-primary"
             >
-              <CalendarPlus size={18} /> New Reservation (Create)
+              <CalendarPlus size={18} /> New Reservation
             </button>
           </div>
         </div>
@@ -302,7 +302,7 @@ export const BookingsPage = () => {
             </div>
             <h4 style={{ fontSize: '1.25rem', marginBottom: '0.6rem' }}>Cancel Reservation {deleteConfirmationId}?</h4>
             <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-              This will remove the reservation from the guest registry. This action demonstrates the CRUD Delete operation.
+              This will remove the reservation from the guest registry and release the suite accommodation.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
               <button

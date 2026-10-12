@@ -98,10 +98,10 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Aurelia Grand Resort & Spa. Built with React 19, Redux Toolkit & React Router DOM.</p>
+          <p>© {new Date().getFullYear()} Aurelia Grand Resort & Spa. All rights reserved.</p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <span>Netlify Deployment Ready</span>
-            <Link to="/bookings" style={{ color: 'var(--text-gold)' }}>Manage Reservations (CRUD)</Link>
+            <Link to="/rooms">Suites & Villas</Link>
+            <Link to="/bookings" style={{ color: 'var(--text-gold)' }}>Manage Reservations</Link>
           </div>
         </div>
       </div>

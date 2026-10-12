@@ -48,11 +48,11 @@ export const ExplorePage = () => {
           <span className="section-eyebrow">Island & Atoll Biosphere</span>
           <h1>Curated Excursions & Local Attractions</h1>
           <p className="section-subtitle">
-            Demonstrating API integration with our custom <code>useFetch</code> hook, asynchronous states (loading, error, refetch), and real-time category filtering.
+            Discover private island secrets, marine sanctuaries, and cultural treasures curated by our resident naturalists.
           </p>
         </div>
 
-        {/* API Status & Refetch Bar */}
+        {/* Filter & Refresh Controls Bar */}
         <div
           className="glass-card"
           style={{
@@ -66,13 +66,12 @@ export const ExplorePage = () => {
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <span className="badge badge-emerald">API Status: Connected</span>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-              Async lifecycle via <code>useFetch(endpoint, fallback)</code>
+            <span style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
+              Filter by Interest:
             </span>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap' }}>
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -88,10 +87,10 @@ export const ExplorePage = () => {
               onClick={refetch}
               className="btn btn-outline-gold btn-sm"
               disabled={loading}
-              title="Trigger refetch on API endpoint"
+              title="Refresh excursion guides"
             >
               <RefreshCw size={14} className={loading ? 'animate-spin' : ''} />
-              {loading ? 'Refreshing...' : 'Refetch API'}
+              {loading ? 'Refreshing...' : 'Refresh Guides'}
             </button>
           </div>
         </div>

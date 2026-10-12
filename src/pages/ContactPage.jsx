@@ -139,7 +139,7 @@ export const ContactPage = () => {
           <span className="section-eyebrow">Personalized Hospitality</span>
           <h1>VIP Concierge & Inquiries</h1>
           <p className="section-subtitle">
-            Controlled form state with comprehensive validation, error focus via <code>useRef</code>, and instant concierge routing.
+            Connect directly with our 24/7 dedicated guest concierge for bespoke arrangements, private transfers, and luxury itineraries.
           </p>
         </div>
 

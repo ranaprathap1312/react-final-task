@@ -10,7 +10,7 @@ import ConceptBadge from '../components/common/ConceptBadge';
 import { Heart, Trash2, Calendar, ShoppingBag, ArrowRight, Check } from 'lucide-react';
 
 export const FavoritesPage = () => {
-  useDocumentTitle('Saved Wishlist & Itinerary (Redux Store)');
+  useDocumentTitle('Saved Wishlist & Itinerary');
   const dispatch = useDispatch();
   const { showToast } = useToast();
 
@@ -48,10 +48,10 @@ export const FavoritesPage = () => {
         />
 
         <div className="section-header">
-          <span className="section-eyebrow">Redux Global State Management</span>
+          <span className="section-eyebrow">Personal Sanctuary</span>
           <h1>Guest Wishlist & Experience Itinerary</h1>
           <p className="section-subtitle">
-            Demonstrating Redux Toolkit slices (<code>favoritesSlice</code> and <code>cartSlice</code>) for synchronized cross-component state and dynamic currency conversions.
+            Your hand-selected luxury suites and reserved resort experiences, tailored to your journey.
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export const FavoritesPage = () => {
                               showToast(`Removed "${room.title}" from saved favorites`, 'info');
                             }}
                             className="btn btn-secondary btn-sm"
-                            title="Remove from favorites (Redux dispatch)"
+                            title="Remove from favorites"
                           >
                             <Trash2 size={14} />
                           </button>
@@ -129,7 +129,7 @@ export const FavoritesPage = () => {
               <Heart size={36} color="var(--text-muted)" style={{ margin: '0 auto 0.8rem auto' }} />
               <h4>Your wishlist is empty</h4>
               <p style={{ margin: '0.4rem 0 1.2rem 0', fontSize: '0.92rem' }}>
-                Click the heart icon on any suite card to save accommodations to this Redux store list.
+                Click the heart icon on any suite card to save accommodations to your personal wishlist.
               </p>
               <Link to="/rooms" className="btn btn-outline-gold btn-sm">
                 Browse Suites & Villas

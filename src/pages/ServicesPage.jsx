@@ -29,10 +29,10 @@ export const ServicesPage = () => {
         />
 
         <div className="section-header">
-          <span className="section-eyebrow">Nested Routing Showcase</span>
+          <span className="section-eyebrow">World-Class Indulgences</span>
           <h1>Resort Experiences & Curated Offerings</h1>
           <p className="section-subtitle">
-            Explore our world-renowned amenities through nested routing views. Each category features instant experience reservations synced to your itinerary.
+            Explore our world-renowned wellness rituals, Michelin dining, sea expeditions, and private celebration venues.
           </p>
         </div>
 

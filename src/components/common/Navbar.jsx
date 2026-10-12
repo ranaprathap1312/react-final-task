@@ -14,9 +14,9 @@ export const Navbar = () => {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/rooms', label: 'Suites & Villas' },
-    { to: '/services', label: 'Experiences', badge: 'Nested' },
-    { to: '/bookings', label: 'Reservations', badge: 'CRUD' },
-    { to: '/explore', label: 'Explore', badge: 'API' },
+    { to: '/services', label: 'Experiences' },
+    { to: '/bookings', label: 'Reservations' },
+    { to: '/explore', label: 'Explore' },
     { to: '/about', label: 'Heritage' },
     { to: '/contact', label: 'Concierge' },
   ];
@@ -40,22 +40,6 @@ export const Navbar = () => {
                   className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                 >
                   {item.label}
-                  {item.badge && (
-                    <span
-                      style={{
-                        marginLeft: '5px',
-                        fontSize: '0.65rem',
-                        padding: '1px 5px',
-                        borderRadius: '4px',
-                        background: 'var(--color-gold-glow)',
-                        color: 'var(--text-gold)',
-                        border: '1px solid var(--border-subtle)',
-                        verticalAlign: 'middle',
-                      }}
-                    >
-                      {item.badge}
-                    </span>
-                  )}
                 </NavLink>
               </li>
             ))}
@@ -108,20 +92,6 @@ export const Navbar = () => {
               style={{ fontSize: '1.1rem', padding: '0.5rem 0' }}
             >
               {item.label}
-              {item.badge && (
-                <span
-                  style={{
-                    marginLeft: '8px',
-                    fontSize: '0.7rem',
-                    padding: '2px 6px',
-                    borderRadius: '4px',
-                    background: 'var(--color-gold-glow)',
-                    color: 'var(--text-gold)',
-                  }}
-                >
-                  {item.badge}
-                </span>
-              )}
             </NavLink>
           ))}
           <div style={{ paddingTop: '1rem', borderTop: '1px solid var(--border-subtle)', display: 'flex', gap: '1rem' }}>
