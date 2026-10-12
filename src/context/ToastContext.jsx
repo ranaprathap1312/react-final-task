@@ -1,0 +1,55 @@
+import { createContext, useContext, useState, useCallback } from 'react';
+import { CheckCircle2, AlertCircle, Info, X } from 'lucide-react';
+
+const ToastContext = createContext();
+
+export const ToastProvider = ({ children }) => {
+  const [toasts, setToasts] = useState([]);
+
+  const removeToast = useCallback((id) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id));
+  }, []);
+
+  const showToast = useCallback((message, type = 'success', duration = 3500) => {
+    const id = Date.now() + Math.random();
+    setToasts((prev) => [...prev, { id, message, type }]);
+
+    if (duration > 0) {
+      setTimeout(() => {
+        removeToast(id);
+      }, duration);
+    }
+  }, [removeToast]);
+
+  return (
+    <ToastContext.Provider value={{ showToast }}>
+      {children}
+      {/* Toast rendering container */}
+      <div className="toast-container" aria-live="polite">
+        {toasts.map((toast) => (
+          <div key={toast.id} className={`toast-message toast-${toast.type}`}>
+            {toast.type === 'success' && <CheckCircle2 size={18} />}
+            {toast.type === 'error' && <AlertCircle size={18} />}
+            {toast.type === 'info' && <Info size={18} />}
+            <span style={{ flex: 1 }}>{toast.message}</span>
+            <button
+              onClick={() => removeToast(toast.id)}
+              style={{ color: 'inherit', display: 'flex', opacity: 0.7 }}
+              aria-label="Close notification"
+            >
+              <X size={15} />
+            </button>
+          </div>
+        ))}
+      </div>
+    </ToastContext.Provider>
+  );
+};
+
+export const useToast = () => {
+  const context = useContext(ToastContext);
+  if (!context) {
+    throw new Error('useToast must be used within a ToastProvider');
+  }
+  return context;
+};
